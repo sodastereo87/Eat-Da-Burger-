@@ -1,16 +1,20 @@
 var mysql = require("mysql");
+require("dotenv").config();
 
 var connection;
 
-
+if (process.env.JAWSDB_URL){
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+  }else{
 connection = mysql.createConnection({
   host: "localhost",
   user: "root",
   port: 3306,
-  password: "p9yyexpz",
+  password: process.env.MYSQL_PASSWORD,
   // password: "",
   database: "burgers_db"
 });
+};
 
 // Make connection.
 connection.connect(function(err) {
