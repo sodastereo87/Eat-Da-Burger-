@@ -11,7 +11,7 @@ connection = mysql.createConnection({
   user: process.env.JAWSDB_USERNAME,
   port: 3306,
   password: process.env.MYSQL_PASSWORD,
-  database: 'jr9jocxjktaatous'
+  database: 'uf0b7jv0gftw9b8v'
 });
 };
 
